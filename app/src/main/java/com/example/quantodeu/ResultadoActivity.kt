@@ -44,6 +44,8 @@ class ResultadoActivity : AppCompatActivity() {
 
         tvResultado.text = "R$ %.2f".format(totalConta)
         tvTotalPorPessoa.text = "R$ %.2f".format(valorPessoa)
+        atualizacao
+        master
 
         val btnVoltar = findViewById<Button>(R.id.btn_retornar)
         btnVoltar.setOnClickListener {
