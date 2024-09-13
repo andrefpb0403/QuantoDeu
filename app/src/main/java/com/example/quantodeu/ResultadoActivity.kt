@@ -1,5 +1,6 @@
 package com.example.quantodeu
 
+
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -11,7 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 
 
 class ResultadoActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+        override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_resultado)
@@ -26,6 +27,7 @@ class ResultadoActivity : AppCompatActivity() {
         val tvQtdPessoas = findViewById<TextView>(R.id.tv_qtdpessoas)
         val tvResultado = findViewById<TextView>(R.id.tv_totalconta)
         val tvTotalPorPessoa = findViewById<TextView>(R.id.tv_resultado)
+
 
         val valorConta = intent.getStringExtra("valorConta")
         val porcentagemGorjeta = intent.getStringExtra("porcentagemGorjeta")
@@ -42,7 +44,8 @@ class ResultadoActivity : AppCompatActivity() {
 
         tvResultado.text = "R$ %.2f".format(totalConta)
         tvTotalPorPessoa.text = "R$ %.2f".format(valorPessoa)
-
+        atualizacao
+        master
 
         val btnVoltar = findViewById<Button>(R.id.btn_retornar)
         btnVoltar.setOnClickListener {
