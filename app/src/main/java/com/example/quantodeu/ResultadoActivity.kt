@@ -40,8 +40,8 @@ class ResultadoActivity : AppCompatActivity() {
         val totalConta = valorConta.toDouble() + gorjeta
         val valorPessoa = totalConta / qtdPessoas!!.toDouble()
 
-        tvResultado.text = totalConta.toString()
-        tvTotalPorPessoa.text = valorPessoa.toString()
+        tvResultado.text = "R$ %.2f".format(totalConta)
+        tvTotalPorPessoa.text = "R$ %.2f".format(valorPessoa)
 
 
         val btnVoltar = findViewById<Button>(R.id.btn_retornar)
