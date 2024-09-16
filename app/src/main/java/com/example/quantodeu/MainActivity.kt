@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val btnResultado = findViewById<Button>(R.id.btn_retornar)
+        val btnResultado = findViewById<Button>(R.id.btn_resultado)
         val edtValorConta = findViewById<TextInputEditText>(R.id.edt_valor_conta)
         val edtPorcentagemGorjeta = findViewById<TextInputEditText>(R.id.edt_porcentagem_gorjeta)
         val edtQtdPessoas = findViewById<TextInputEditText>(R.id.edt_qtd_pessoas)

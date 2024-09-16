@@ -5,18 +5,33 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".ResultadoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/header_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_label_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="48dp"
         android:gravity="center"
         android:text="Quanto Deu?"
-        android:textSize="48sp"
+        android:textSize="52sp"
         android:textStyle="bold"
+        android:textColor="@color/background"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,6 +42,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="80dp"
         android:text="Valor da conta"
+        android:textSize="16sp"
+        android:textColor="@color/texto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_label_header" />
 
@@ -37,6 +54,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="% da gorjeta"
+        android:textSize="16sp"
+        android:textColor="@color/texto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_conta_label" />
 
@@ -47,21 +66,25 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Dividido por:"
+        android:textSize="16sp"
+        android:textColor="@color/texto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_porcentagem_gorjeta" />
 
     <Button
         android:id="@+id/btn_retornar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/primary"
         android:text="Voltar"
-        android:textSize="16sp"
+        android:textSize="18sp"
+        android:textColor="@color/background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -71,6 +94,8 @@
         android:layout_marginTop="80dp"
         android:layout_marginEnd="24dp"
         android:text="TextView"
+        android:textSize="16sp"
+        android:textColor="@color/texto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_label_header" />
 
@@ -81,6 +106,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:text="TextView"
+        android:textSize="16sp"
+        android:textColor="@color/texto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_valor_conta" />
 
@@ -91,6 +118,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:text="TextView"
+        android:textSize="16sp"
+        android:textColor="@color/texto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_porcentagem" />
 
@@ -98,10 +127,11 @@
         android:id="@+id/tv_resultado_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="64dp"
         android:text="Total por pessoa"
         android:textSize="36sp"
         android:textStyle="bold"
+        android:textColor="@color/texto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -115,6 +145,7 @@
         android:text="R$ %.2f"
         android:textSize="42sp"
         android:textStyle="bold"
+        android:textColor="@color/texto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -129,6 +160,7 @@
         android:text="Total da conta"
         android:textStyle="bold"
         android:textSize="18sp"
+        android:textColor="@color/texto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_label_qtdpessoas" />
 
@@ -137,11 +169,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="16dp"
         android:text="TextView"
         android:textStyle="bold"
         android:inputType="numberDecimal"
         android:textSize="18sp"
+        android:textColor="@color/texto"
         android:maxLength="9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_qtdpessoas" />
