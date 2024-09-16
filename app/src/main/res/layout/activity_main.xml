@@ -5,7 +5,20 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/header_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/TextInputLayout1"
@@ -14,6 +27,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
+        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,6 +37,7 @@
             android:id="@+id/edt_valor_conta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_textinuput"
             android:hint="Ex: 198.50" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -30,9 +45,12 @@
         android:id="@+id/tv_conta_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="80dp"
         android:text="Digite o valor total da conta"
+        android:textSize="16sp"
+        android:textColor="@color/texto"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_label_header" />
 
@@ -40,9 +58,12 @@
         android:id="@+id/tv_porcentagem_gorjeta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:text="Digite a % da gorjeta"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/texto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextInputLayout1" />
 
@@ -53,6 +74,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
+        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,6 +84,7 @@
             android:id="@+id/edt_porcentagem_gorjeta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_textinuput"
             android:hint="Ex: 5 ou 10 ou 15" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -69,9 +92,12 @@
         android:id="@+id/tv_label_qtdpessoas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:text="Será dividido em quantas pessoas?"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/texto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextInputLayout2" />
 
@@ -82,6 +108,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
+        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -91,19 +118,22 @@
             android:id="@+id/edt_qtd_pessoas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_textinuput"
             android:hint="Ex: 4" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btn_retornar"
+        android:id="@+id/btn_resultado"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Calcular Resultado"
-        android:textSize="16sp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/primary"
+        android:text="Calcular Resultado"
+        android:textSize="18sp"
+        android:textColor="@color/background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -113,12 +143,14 @@
         android:id="@+id/tv_label_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="48dp"
         android:gravity="center"
-        android:textStyle="bold"
-        android:textSize="48sp"
         android:text="Quanto Deu?"
+        android:textSize="52sp"
+        android:textStyle="bold"
+        android:textColor="@color/background"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
