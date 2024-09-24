@@ -15,11 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+
         val btnResultado = findViewById<Button>(R.id.btn_resultado)
         val edtValorConta = findViewById<TextInputEditText>(R.id.edt_valor_conta)
         val edtPorcentagemGorjeta = findViewById<TextInputEditText>(R.id.edt_porcentagem_gorjeta)
